@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic Task Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <span class="logo">📝</span>
+            <h1>Generic Task Manager</h1>
+        </div>
+    </header>
+    <main>
+        <div class="task-input">
+            <input type="text" id="task-input" placeholder="Enter task">
+            <button id="add-btn">Add Task</button>
+        </div>
+        <div class="task-section">
+            <h2>Tasks</h2>
+            <div class="task-list" id="task-list"></div>
+        </div>
+        <div class="stats">
+            <span id="stats">0 of 0 tasks implemented</span>
+        </div>
+    </main>
+    <footer>
+        <a href="#" id="about-link">| About |</a>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

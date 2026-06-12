@@ -1,0 +1,210 @@
+:root {
+    --primary: #f039b1;
+    --secondary: #f29ad8;
+    --accent: #f658b8;
+    --bg: #fff0f5;
+}
+
+body {
+    font-family: 'Roboto', system-ui, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--bg);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 4px solid var(--primary);
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: 3px solid var(--primary);
+    box-shadow: 0 6px 0 #c02b8a;
+}
+
+.logo { font-size: 2.5rem; }
+
+h1 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.task-input {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 16px;
+    font-size: 1.1rem;
+    border: 3px solid var(--secondary);
+    border-radius: 12px;
+    background: white;
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+#add-btn {
+    padding: 16px 32px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #c02b8a;
+}
+
+#add-btn:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+.task-section h2 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 18px;
+    background: white;
+    border: 3px solid var(--secondary);
+    border-radius: 12px;
+    box-shadow: 0 4px 0 #e0e0e0;
+    transition: all 0.2s;
+}
+
+.task-content {
+    flex: 1;
+    min-width: 0; /* важно для переноса текста */
+}
+
+.task-text {
+    font-size: 1.15rem;
+    font-weight: 400;
+    display: block;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.task-date {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 4px;
+    display: block;
+}
+
+.controls {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0; /* не сжимаются */
+}
+
+.controls button {
+    width: 38px;
+    height: 38px;
+    border: 2px solid #333;
+    background: white;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls button:hover {
+    background: var(--secondary);
+}
+
+.delete-btn { color: #e74c3c; }
+
+.stats {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--primary);
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+}
+
+#about-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#about-link:hover {
+    text-decoration: underline;
+}
+
+/* Modal */
+#about-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border: 4px solid var(--primary);
+    border-radius: 20px;
+    max-width: 90%;
+    width: 700px;
+    box-shadow: 0 15px 30px rgba(240, 57, 177, 0.3);
+    z-index: 1000;
+    max-height: 85vh;
+    overflow-y: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+#about-modal h2 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+#about-modal button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#about-modal button:hover {
+    background: var(--accent);
+}
